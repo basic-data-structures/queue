@@ -17,7 +17,6 @@ private:
 public:
     Queue();
     ~Queue();
-
     Type getData(int pos);
     bool existsData(Type key);
     int getElements();
@@ -98,7 +97,7 @@ void Queue<Type>:: enqueue(Type key) {
 template < typename Type >
 void Queue<Type>:: dequeue() {
     if (!empty()) {
-        cout << "\n\tDequeueing " << first->getData() << " from " << first << "...\n";
+        cout << "\tDequeueing " << first->getData() << " from " << first << "...\n";
         Node<Type>* aux = first;
         if (first == last)
             first = last = 0;
@@ -121,7 +120,7 @@ void Queue<Type>:: printData() {
 template < typename Type >
 void Queue<Type>:: showElements() {
     cout << "\n";
-    for (int i = 0; i <= elements; i++) {
+    for (int i = 0; i < elements; i++) {
         cout << "\t" << i << ". " << getData(i) << "\n";
     }
     cout << "\n";

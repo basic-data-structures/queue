@@ -2,8 +2,9 @@
 
 int main() {
     Queue<int> q;
-    for (int i = 0; i < 11; ++i) {
-        q.enqueue(i);
+    for (int i = 0; i < 10; ++i) {
+        q.enqueue(i+1);
     }
+    q.showElements();
     return 0;
 }
