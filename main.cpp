@@ -3,8 +3,12 @@
 int main() {
     Queue<int> q;
     for (int i = 0; i < 10; ++i) {
-        q.enqueue(i+1);
+        cout << "\tQueueing " << i + 1 << "...\n";
+        q.enqueue(i + 1);
     }
-    q.showElements();
+    for (int i = 0; i < 10; ++i) {
+        cout << "\tDequeueing " << q.peek() << "...\n";
+        q.dequeue();
+    }
     return 0;
 }
